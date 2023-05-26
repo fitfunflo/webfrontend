@@ -1,0 +1,11 @@
+body {
+  background-color: #fff592;
+  color: #0f7a8a;
+  font-family: "Courier New";
+  font-size: 14px;
+}
+
+#main {
+  margin: 100px auto;
+  width: 598px;
+}

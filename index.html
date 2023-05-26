@@ -2,19 +2,33 @@
   <head>
     <title>FITFUNFLO</title>
     <script>
-      function setMain(src) {
-	  var main = document.getElementById('main');
-	  main.src = src;
-      }
+      function load() {
+       var fitfunflo = `
+FFFFFFF IIIIIII TTTTTTT FFFFFFF UU   UU NN   NN FFFFFFF LL        OOO
+FF        III     TTT   FF      UU   UU NN   NN FF      LL       OO OO
+FF        III     TTT   FF      UU   UU NNN  NN FF      LL      OO   OO
+FFFFF     III     TTT   FFFFF   UU   UU NN N NN FFFFF   LL      OO   OO
+FF        III     TTT   FF      UU   UU NN  NNN FF      LL      OO   OO
+FF        III     TTT   FF      UU   UU NN   NN FF      LL       OO OO
+FF      IIIIIII   TTT   FF       UUUUU  NN   NN FF      LLLLLLL   OOO
+`;
+       // Replace space and newline with their HTML counterparts.
+       fitfunflo = fitfunflo.replace(/ /g, '&nbsp;').replace(/\n/g, '<br>');
+       var e = document.getElementById('fitfunflo');
+       e.innerHTML = fitfunflo;
+     }
     </script>
+    <link rel="stylesheet" type="text/css" href="index.css"/>
   </head>
   <body style="margin:0;">
-    <img id="main" style="width:100%;" src="img/home.png"/>
-    <div id="footer" style="margin-top:4px; font-size:12px; text-align:center; ">
-      <span id="footer_home" onclick="setMain('img/home.png');">Home</span>&nbsp;&nbsp;
-      <span id="footer_about" onclick="setMain('img/about.png');">About</span>&nbsp;&nbsp;
-      <span id="footer_news" onclick="setMain('img/news.png');">News</span>&nbsp;&nbsp;
-      <span id="footer_contact" onclick="setMain('img/contact.png');">Contact</span>&nbsp;&nbsp;
+    <div id="main">
+      <div id="fitfunflo"></div>
+      <p>
+      Fitfunflo is a small video game development team that is focused
+      on creating games for Roblox. We will provide updates on our progress
+      as necessary. You can contact us at 7it7un7lo@gmail.com.
+      </p>
     </div>
+    <script>window.onload = load;</script>
   </body>
 </html>
